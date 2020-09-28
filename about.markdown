@@ -1,3 +1,11 @@
+---
+layout: archive-taxonomies
+type: About
+title: About
+permalink: /About/
+---
+
+
 **宋伟任**                                手机:18801910690
 
 上海大学|工学硕士           邮箱：songweiren_shu@163.com                                 <img src=".\image\header.jpg" alt="header" style="zoom:12%;" />
