@@ -13,12 +13,12 @@ CAN报文中我们有11位标志符的标准帧也有29位标志符的扩展帧�
 这一点几乎就是J1939协议的全部内容。CAN2.0B使用29位的标志符来区分不同的报文，J1939对这29标志符进行了重新的分类和解释。打个不是很恰当的比方， 以前CAN2.0B协议根据人的体重来区分不同的人，只要一样重(ID)就认为是相同的人群，体重越瘦的就越是受CAN2.0B协议喜欢(优先级越高),现在J1939也是测量体重， 只不过是把人的脑袋，躯干，双手，双腿分别测量，然后对这几个重量进行某种运算(比如脑袋重量的平方，躯干重量与双手重量乘积，以及双腿重量这三个数字之和), 只要运算的结果(PGN)一致，就认为这些人是一个人群。
 
 也就是说,J1939对CAN2.0B中的29位标志进行了重新解释,我们使用下面这张图来说明一下:
-![](j1939image/1.png)
+![](https://raw.githubusercontent.com/DarrenSong/darrensong.github.io/master/_posts/j1939image/1.png)
 
 J1939对CAN ID进行了重新划分，加上最多8个字节的数据域，构成了J1939 的协议数据单元(Protocol Data Unit, PDU)，其中前3位表示优先级位(Priority, P)， 之后是扩展数据页位(Extended Data Page, EDP),数据页位(Data Page,DP), PDU格式位(PDU Format, PF), PDU特定域位(PDU Specific, PS), 源地址位(Source Address,SA) 以及数据域(Data Filed)。
 
 J1939的协议数据单元与CAN 报文帧相比要少一部分，比如SOF, SRR, IDE等，这是因为这部分完全由CAN 2.0B控制，J1939并未对这部分做任何修改。 J1939与CAN报文帧的对比可参考下图:
-![](j1939image/2.jpg)
+![](https://raw.githubusercontent.com/DarrenSong/darrensong.github.io/master/_posts/j1939image/2.jpg)
 如上图所示，J1939重新划分了29位的CAN ID,中间18位共同组成了参数组编号(Parameter Group Number, PGN),在CAN 报文中，我们根据CAN ID来区分不同报文，在J1939中， 我们根据PGN来区分不同的报文。J1939-71中对不同的PGN做了一系列详细的规定，不同的PGN来表示不同的数据或者功能。J1939-71对PGN的规定非常详细,足足有六百多页， 对于用户来说，可能熟悉自己常用的一些PGN就足够了，具体需要某些功能时去查询就好了。
 
 总结一下就是，J1939跟CAN 2.0B不同的地方就在于，J1939是以PGN为中心，通过不同的PGN来区分不同的类型,比如有些PGN传输控制命令，有些PGN传输数据， 有些传输请求，有些传输响应等等。在使用CAN传输数据时，CAN协议往往是我们自己定义的， 而J1939-71中对不同的PGN做了详细的规定，相当于已经帮我们做好了协议。当然实际情况中我们也可以自定义PGN。理解了这些后，学习J1939就会变得很简单， 之后再对J1939的细节做一些介绍。
@@ -34,13 +34,13 @@ J1939的协议数据单元与CAN 报文帧相比要少一部分，比如SOF, SRR
 
 - 数据页(Data Page,DP)
 用于联合扩展数据页来决定CAN ID结构，当EDP为0时，DP为0或者1分别表示第0页或者第1页PGN。如下图所示:
-![](j1939image/3.png)
+![](https://raw.githubusercontent.com/DarrenSong/darrensong.github.io/master/_posts/j1939image/3.png)
 PDU格式(PF)
 PF用来确定PDU的格式，两种格式计算得到PGN的方式不同，我们会在后面介绍这两种计算方式。
 
 PDU特定域(PS)
 PS的定义取决于PF, 它可能表示目标地址(Source Address, SA)，可能表示组扩展(Group Extension,GE), 如果PF < 0xF0则表示为DA，否则表示为GE。如下图所示:
-![](j1939image/4.png)
+![](https://raw.githubusercontent.com/DarrenSong/darrensong.github.io/master/_posts/j1939image/4.png)
 - 目标地址(DA)
 DA是报文的目标地址，除目标地址的设备外，其他设备应该忽略此报文。如果目标地址为0xFF,则表示为全局地址，此时所有设备都应该监听此报文并在收到报文后做出响应。
 
