@@ -3,7 +3,7 @@ layout: post
 title:  "C/C++之单链表的节点删除和插入"
 date:   2019-04-19 22:49:52 +0800
 categories: C/C++
-tags: C/C++
+tags: C_or_CPP
 ---
 ```C++
 #include<stdio.h>

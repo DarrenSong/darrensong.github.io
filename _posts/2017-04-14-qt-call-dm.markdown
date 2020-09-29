@@ -3,7 +3,7 @@ layout: post
 title:  "Qt Creator5.8调用大漠插件"
 date:   2017-04-14 22:49:52 +0800
 categories: Qt
-tags: C/C++
+tags: C_or_CPP
 ---
 在网上找了很多，没找到这方面的教程，通过Qt官方帮助终于调试成功。Qt有专门的类实现com组件的调用，说明文档上有很多种方式，这里简单说明一种方式。
 
