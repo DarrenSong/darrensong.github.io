@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "CentOS 7搭建ss服务器"
-date:   2018-01-21 22:49:52 +0800
+date:   2018-03-08 22:49:52 +0800
 categories: GreatWall
 ---
 首先root用户登陆
