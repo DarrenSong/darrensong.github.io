@@ -2,7 +2,7 @@
 layout: post
 title:  "ROS学习笔记---Beginner Level常用操作"
 date:   2019-10-01 22:49:52 +0800
-categories: ROS
+categories: ROS Linux
 tags: C_or_CPP
 ---
 @[TOC](ROS学习笔记（二）---Beginner Level)
