@@ -3,6 +3,7 @@ layout: post
 title:  "Windows批处理脚本(一)"
 date:   2019-05-15 22:49:52 +0800
 categories: Windows
+tags: batch 
 ---
 ##### 基本命令
 | cmd |  |
