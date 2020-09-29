@@ -3,7 +3,7 @@ layout: post
 title:  "C++ Template之多自定义参数实例化"
 date:   2020-06-09 22:49:52 +0800
 categories: C/C++
-tags: C/C++
+tags: C_or_CPP
 ---
 简单写个示例：【VS2012编译运行通过】
 
