@@ -3,6 +3,7 @@ layout: post
 title:  "Shell"
 date:   2020-08-25 22:49:52 +0800
 categories: Linux
+tags: Shell
 ---
 1 列出目录内容：ls
 

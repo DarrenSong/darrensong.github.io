@@ -3,6 +3,7 @@ layout: post
 title:  "Python GUI之Tkinter入门模板"
 date:   2020-07-07 22:49:52 +0800
 categories: Python
+tags: Python
 ---
 ```Python
 import tkinter as tk

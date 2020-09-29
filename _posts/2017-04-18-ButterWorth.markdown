@@ -3,6 +3,7 @@ layout: post
 title:  "ButterWorth滤波"
 date:   2017-04-18 22:49:52 +0800
 categories: 嵌入式开发
+tags: c/c++
 ---
 ```matlab
 function y=highp(x,f1,f3,rp,rs,Fs)
