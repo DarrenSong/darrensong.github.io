@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "让人震撼惊讶的85句话!"
+title:  "IT人生畅想"
 date:   2017-01-01 22:49:52 +0800
 categories: 随笔
 ---
