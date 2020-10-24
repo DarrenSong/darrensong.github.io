@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Find the sub max valud of an array"
+title:  "Find the sub max value of an array[查找给定数组的次大值]"
 date:   2020-10-24 22:49:52 +0800
 categories: C/C++
 tags: C_or_CPP
