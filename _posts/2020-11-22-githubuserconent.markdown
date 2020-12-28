@@ -20,7 +20,7 @@ sudo vi /etc/hosts
 
 185.199.111.153 assets-cdn.github.com
 
-151.101.76.133 raw.githubusercontent.com
+199.232.96.133 raw.githubusercontent.com
 
 151.101.108.133 user-images.githubusercontent.com
 
